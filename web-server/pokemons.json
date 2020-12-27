@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Pikachu",
+    "power": 2800,
+    "avatar": "https://assets.stickpng.com/images/580b57fcd9996e24bc43c325.png",
+    "specials": [
+      "Choque do trovao",
+      "Rabada do rato alegre"
+    ]
+  },
+  {
+    "name": "Bulbasauro",
+    "power": 3100,
+    "avatar": "https://i.pinimg.com/originals/3b/78/47/3b7847675982776e5219e12a680ecd84.png",
+    "specials": [
+      "Chicotada divina",
+      "Rabada do sapo alegre"
+    ]
+  },
+  {
+    "name": "Squirtle",
+    "power": 2600,
+    "avatar": "https://i.pinimg.com/originals/1b/47/3a/1b473a97ded04ac7c5b85eaf2baa5441.png",
+    "specials": [
+      "Rabada da tartaruga"
+    ]
+  },
+  {
+    "name": "Charmander",
+    "power": 3200,
+    "avatar": "https://i.pinimg.com/originals/7a/f6/0b/7af60b2b6fa202db54f0aa275fee6e17.png",
+    "specials": [
+      "Fogarel",
+      "Rabada do lagarto de fogo"
+    ]
+  }
+]
