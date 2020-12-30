@@ -31,10 +31,11 @@ func (service *ServiceImpl) SearchByGender(k string) ([]entity.Movie, error) {
 		return []entity.Movie{}, err
 	}
 	filtered := []entity.Movie{}
-	for _, movie := range movies {
-		for _, gender := range movie.Genres {
-			if strings.Contains(strings.ToLower(gender), strings.ToLower(k)) {
-				filtered = append(filtered, movie)
+	for i := range movies {
+		for j := range movies[i].Genres {
+			if strings.Contains(strings.ToLower(movies[i].Genres[j]), strings.ToLower(k)) {
+				filtered = append(filtered, movies[i])
+				break
 			}
 		}
 	}

@@ -9,12 +9,15 @@ import (
 	"github.com/thalysonalexr/learning-go/docker/errors"
 )
 
+// Repository interface to repositories
 type Repository interface {
 	List() ([]entity.Movie, error)
 }
 
+// MoviesRepositoryImpl struct to implement methods
 type MoviesRepositoryImpl struct{}
 
+// List method to list movies
 func (r *MoviesRepositoryImpl) List() ([]entity.Movie, error) {
 	res, err := http.Get("https://raw.githubusercontent.com/meilisearch/MeiliSearch/master/datasets/movies/movies.json")
 	if err != nil {

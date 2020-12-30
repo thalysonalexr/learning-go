@@ -8,6 +8,7 @@ import (
 	"github.com/thalysonalexr/learning-go/docker/usecase"
 )
 
+// GetMovies handler to get all movies
 func GetMovies(s usecase.Service) func(http.ResponseWriter, *http.Request) {
 	return func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Set("Content-Type", "application/json;charset=utf-8")
@@ -23,10 +24,10 @@ func GetMovies(s usecase.Service) func(http.ResponseWriter, *http.Request) {
 		}
 		var toPresenter []MoviePresenter
 		for _, movie := range movies {
-			formatData, _ := time.Parse(movie.ReleaseNote.String(), "2014-11-12T11:45:26.371Z")
 			toPresenter = append(toPresenter, MoviePresenter{
 				Title:       movie.Title,
-				ReleaseNote: formatData.String(),
+				ReleaseDate: time.Unix(int64(movie.ReleaseDate), 1000),
+				Genres:      movie.Genres,
 			})
 		}
 		encoded, err := json.Marshal(toPresenter)
